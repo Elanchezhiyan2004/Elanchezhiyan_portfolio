@@ -1,0 +1,85 @@
+h1 {
+    text-align: center;
+}
+button:hover{
+    color: white;
+    background-color:black ;
+
+}
+button{
+    margin: 20px;
+}
+::placeholder{
+    color: black;
+}
+.form-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+    margin: auto;
+    width:600px;
+}
+#details{
+    color: black;
+    width: 900px;
+    height: inherit;
+    border: 2px solid white;
+    margin: 150px;
+    /* padding: 20px; */
+    background-color:  #ffffff85;
+}
+.field,.field-full{
+    display:flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+.field-full{
+    grid-column: span 2;
+}
+.err_msg{
+    color: red;
+    height: 18px;
+    font-size:15px ;
+    margin-left: 30px;
+    /* display:block; */
+}
+#status_container{
+    width: 200px;
+}
+/* .container{
+    display: flex;
+    justify-content: center; 
+    text-align: center;}*/
+
+    .pop_up
+    {
+        width: 400px;
+        background: #fff;
+        border-radius: 6px;
+        height: inherit;
+        position: absolute;
+        top:0;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(0.1);
+        text-align: center;
+        padding: 0px 30px 30px;
+        color:#333; 
+        visibility: hidden;
+        transition: transform 0.4s, top 0.4s;
+        /* margin-top: 20px; */
+    }
+    .open-popup{
+        visibility: visible;
+        top:50%;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    #popup_text
+    {
+        font-size: 38px;
+        font-weight: 500;
+        margin: 30px 0px 30px;
+    }
+html{
+    background-image: url(bg_img.jpg);
+}
+

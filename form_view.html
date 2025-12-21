@@ -1,0 +1,102 @@
+<html>
+    <style>
+        .table_content{
+            border-collapse:collapse ;
+            margin: 25px 0;
+            font-size: medium;
+            width: 100%;;
+            border-radius: 2px 2px 0 0;
+        }
+
+        .table_content thead tr{
+            background-color: #009879;
+            color: #fff ;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .table_content th,
+        .table_content td{
+            padding: 12px 15px;
+        }
+
+        .table_content tbody tr{
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .table_content tbody tr:last-of-type{
+            border-bottom: 2px solid #009879;
+        }
+        </style>
+<head></head>
+<body>
+
+
+        <table  class="table_content">
+                <thead>
+                    <th>Name</th>
+                    <th>Employer ID</th>
+                    <th>Date</th>
+                    <th>Email</th>
+                    <th>Task</th>
+                    <th>Status</th>
+                    <th>Queries</th> 
+                </thead>
+
+            <tbody id="view_table">
+                <tr>
+
+                </tr>
+            </tbody>
+        </table>
+
+    <script>
+        //const emp_id="";
+        window.onload = function () {
+  const params = new URLSearchParams(window.location.search);
+ const emp_id = params.get("emp_id");
+ view_user(emp_id);
+}
+
+// async function view_user(emp_id) {
+//     try{
+//     const emp_data={
+//         emp_id
+//     };
+
+//     const res=await fetch("http://localhost:3000/get",{
+//         method :"POST",
+//         headers:{"Content-Type" : "application/json"},
+//         body:JSON.stringify(emp_data)
+//     });
+
+//     const row = await res.json();
+
+//   if (row.message == "Employee not found") {
+//     console.log("NO MATCHES FOUND");
+//     return;
+//   }
+
+//   let tab="";
+
+//    tab =`
+//           <td>${row.emp_name}</td>
+//           <td>${row.emp_id}</td>
+//           <td>${row.date}</td>
+//           <td>${row.email}</td>
+//           <td>${row.task}</td>
+//           <td>${row.status}</td>
+//           <td>${row.queries}</td>
+//       `;
+
+// document.getElementById("view_table").innerHTML=tab;}
+// catch(err)
+// {
+//     console.log("Error occured :",err.message);
+// }
+// }
+
+    </script>
+
+    </body>
+    </html>

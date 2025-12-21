@@ -1,0 +1,126 @@
+<head>
+    <h1>Form Creation</h1>
+</head>
+
+<body>
+
+     <style>
+        .pop_up
+    {
+        width: 500px;
+        background: #fff;
+        border-radius: 6px;
+        height: inherit;
+        position: absolute;
+        top:0;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(0.1);
+        text-align: center;
+        padding: 0px 30px 30px;
+        color:#333; 
+        visibility: hidden;
+        transition: transform 0.4s, top 0.4s;
+        margin-top: 20px;
+    }
+    .open-popup{
+        visibility: visible;
+        top:50%;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    #popup_text
+    {
+        font-size: 38px;
+        font-weight: 500;
+        margin: 30px 0px 30px;
+    }
+
+        .table_content{
+            border-collapse:collapse ;
+            margin: 25px 0;
+            font-size: medium;
+            width: 100%;;
+            border-radius: 2px 2px 0 0;
+        }
+
+        .table_content thead tr{
+            background-color: #009879;
+            color: #fff ;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .table_content th,
+        .table_content td{
+            padding: 12px 15px;
+        }
+
+        .table_content tbody tr{
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .table_content tbody tr:last-of-type{
+            border-bottom: 2px solid #009879;
+        }
+        </style>
+    <button onclick="window.location.href='forms.html'">New Form </button>
+
+    <div id="table_container">
+        <table style="padding: 20px" class="table_content">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Employer ID</th>
+                    <!-- <th>Date</th> -->
+                    <th>Email</th>
+                    <!-- <th>Task</th> -->
+                    <!-- <th>Status</th> -->
+                    <!-- <th>Queries</th> -->
+                    <th>Options</th>
+                </tr>
+            </thead>
+
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+     <div class="pop_up" id="popup" style="padding: 20px;" id="popup">
+              <label>Employer name :</label>
+              <span id="emp_name_span"></span>
+              <br>
+              <label>Employer Id :</label>
+              <span id="emp_id_span"></span>
+              <br>
+              <label>Date  :</label>
+              <span id="date_span"></span>
+              <br>
+              <label>Email Id  :</label>
+              <span id="email_span"></span>
+              <br>
+              <label>Task  :</label>
+              <span id="task_span"></span>
+              <br>
+              <label>Status  :</label>
+              <span id="status_span"></span>
+              <br>
+              <label>Queries  :</label>
+              <span id="queries_span">
+              </span><br>
+              <button type="submit" id="ok_button" onclick="closepopup()">OK</button>
+            </div>
+
+    <script src="form_creation.js"></script>
+    <script>
+        let popup=document.getElementById("popup");
+        
+        function openpopup(){
+
+            popup.classList.add("open-popup");
+        }
+
+function closepopup()
+{
+  popup.classList.remove("open-popup");
+}
+
+
+    </script>
+</body>

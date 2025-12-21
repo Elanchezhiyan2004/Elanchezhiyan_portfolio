@@ -1,0 +1,24 @@
+{
+  "name": "finmet-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.86.0",
+    "adonis": "^0.9.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.11",
+    "path": "^0.12.7",
+    "pg": "^8.16.3",
+    "postgres": "^3.4.7"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

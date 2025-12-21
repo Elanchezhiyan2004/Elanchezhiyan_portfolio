@@ -1,0 +1,95 @@
+
+<html> 
+    <h1 style="color: white;">Finmet Forms</h1>
+<link rel="stylesheet" href="forms.css">
+<body>
+    <div id="details"  class="form-grid" >
+        <div id="name_container" class="field">
+        <label style="padding: 20px;">Employer Name (*):</label>
+        <input type="text" id="emp_name" placeholder="Enter your name" style="width: 200px; height: 30px; background: transparent; color: black;margin-left: 30px;" >
+        <span id="name_err" class="err_msg" ></span>
+        </div>
+      <div id="id_container" class="field">
+        <label style="padding: 20px;">Employer id (*) :</label>
+        <input type="number" id="emp_id" placeholder="Enter your id" style="width: 200px; height: 30px; background: transparent;  color: black; margin-left: 30px; ">
+        <span class="err_msg" id="id_err"></span>
+        </div>
+        <div id="date_container" class="field">
+            <label style="padding: 20px;">Date (*) :</label>
+            <input type="date" id="date" style="width: 200px; height: 30px; background: transparent; color: black;margin-left: 30px; ">
+            <span class="err_msg" id="date_err"></span>
+        </div>
+        <div id="mail_container" class="field">
+          <label style="padding: 20px;">Mail Id (*) :</label>
+          <input type="text" id="mail_box" placeholder="Enter your official mail id" style="width: 200px; height: 30px; background: transparent;  color: black; margin-left: 30px; ">
+          <span class="err_msg" id="mail_err"></span>
+        </div>
+        <div id="task_container" class="field">
+        <label style="padding: 20px;">Task Assigned :</label>
+        <input type="text" id="task" placeholder="Enter your task..." style="width: 200px; height: 30px; background: transparent; color: black;margin-left: 30px;">
+        </div>
+        <div id="status_container" class="field">
+        <label style="padding: 20px;" >Status :</label>
+        <select name="Status :" id="status" placeholder="select one option" style="margin-left: 30px;">
+            <option value="completed" style="margin-left: 30px;">completed</option>
+            <option value="pending" style="margin-left: 30px;">pending</option>
+        </select>
+        </div>
+        
+        <div id="queries_container" class="field-full">
+        <label style="padding: 20px">Queries :</label>
+        <input type="text" id="box" placeholder="Enter your Queries or Suggestions" style="margin-bottom:30px; width: 560px; height: 100px; background: transparent; color: black; margin-left: 70px;">
+        </div>
+        <div class="container">
+            <button type="submit" id="submit">Submit</button>
+            <div class="pop_up" style="padding: 20px;" id="popup">
+              <label style="padding-top:40px;" id="popup_text">Enter your employer id below</label>
+              <br>
+              <input type="text" id="pop_input" placeholder="Employer id">
+              <br>
+              <span class="edit&delete" id="edit_pop-up">
+              <br>
+              <button type="submit" id="delete_button" onclick="closepopup('delete_button')">DELETE</button>
+              <button type="" id="edit_button " onclick="closepopup('edit_button')">EDIT</button>
+            </div>
+            </span>
+        </div>
+      </div>
+    <link rel="stylesheet" href="forms.css">
+    <script>
+      let popup=document.getElementById("popup");
+
+      function openpopup(id)
+      {
+        popup.classList.add("open-popup");
+      //   if(id=='edit')
+      // {
+      //   edit();
+      //   // document.getElementById
+      // }
+      // if(id=='delete')
+      // {
+
+      //   closepopup();
+      // }
+      }
+      function closepopup(id){
+        let check=document.getElementById("pop_input").value;
+        // console.log(check);
+        if(check!="" && id=='delete_button'){
+        popup.classList.remove("open-popup");
+         delete_data();
+      }
+      else if(check!="" && id=='edit_button')
+      {
+        popup.classList.remove("open-popup");
+        edit("edit_pop-up")
+      }
+      else{
+        document.getElementById("edit_pop-up").textContent="Enter the employer id";
+      }
+    }
+    </script>
+    <script src="forms.js"></script>
+</body>
+</html>
